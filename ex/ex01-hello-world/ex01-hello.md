@@ -71,9 +71,11 @@ In the last line we push our disposable onto the context's subscriptions array.
 
 #### API References
 
-[registerCommand API](https://code.visualstudio.com/docs/extensionAPI/vscode-api#commands.registerCommand)
+[commands.registerCommand API](https://code.visualstudio.com/docs/extensionAPI/vscode-api#commands.registerCommand)
 
-[showInformationMessage API](https://code.visualstudio.com/docs/extensionAPI/vscode-api#window.showInformationMessage)
+[window.showInformationMessage API](https://code.visualstudio.com/docs/extensionAPI/vscode-api#window.showInformationMessage)
+
+[context.subscriptions API](https://code.visualstudio.com/docs/extensionAPI/vscode-api#ExtensionContext.subscriptions)
 
 [Disposable API](https://code.visualstudio.com/docs/extensionAPI/vscode-api#Disposable)
 
@@ -90,7 +92,7 @@ in the information bar at the top of the window.
 The code generator automatically generates a number of files for configuring
 and building your extension. It's important to know what each does so you
 can fully customize your extension.\
-[Configuration File API](https://code.visualstudio.com/docs/extensions/example-hello-world#_miscellaneous-files)
+[Configuration File](https://code.visualstudio.com/docs/extensions/example-hello-world#_miscellaneous-files)
 
 ### Activation
 
@@ -132,7 +134,7 @@ for our command. It is triggered `onCommand` or when it is called. The
 `extension.sayHello` (when we called `registerCommand` above). Now our
 extension is available under `Hello World` in the command pallete.
 
-[Extension Manifest API](https://code.visualstudio.com/docs/extensions/example-hello-world#_the-extension-manifest-packagejson)
+[Extension Manifest](https://code.visualstudio.com/docs/extensions/example-hello-world#_the-extension-manifest-packagejson)
 
 ### Debugging
 

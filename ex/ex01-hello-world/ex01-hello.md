@@ -69,6 +69,7 @@ such as event listening or a timer.
 #### API References
 
 [registerCommand](https://code.visualstudio.com/docs/extensionAPI/vscode-api#commands.registerCommand)
+
 [Disposable](https://code.visualstudio.com/docs/extensionAPI/vscode-api#Disposable)
 
 ### Running The Code

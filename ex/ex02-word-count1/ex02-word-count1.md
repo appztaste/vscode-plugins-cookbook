@@ -1,79 +1,61 @@
-# Example 01 - Hello World
+# Example 02 - Word Count 1
 
 [Adataped from the VS Code Hello World](https://code.visualstudio.com/docs/extensions/example-hello-world)
 
-## Generate Your Project
+## Project Prep
 
-Create a new directory, run `yo code` in the terminal and go through the setup,
-all examples in this book are in Typescript, but you are free to use Javascript
-if you can translate the examples. If you need additional help, refer to the
-project-gen.md file in the root directory.
+To make this simple, just make a copy of your last project or edit it directly.
 
-## Hello World
+## Word Count
+
+To keep this simple, we're just going to edit the command implementation and
+leave everything else the same.
 
 ### The Code
 
-After generating your project, open up `extension.ts` in the `src` folder. You
-should have the following code (comments removed):
-
 ```typescript
-import * as vscode from 'vscode';
-export function activate(context: vscode.ExtensionContext) {
-    console.log('Congratulations, your extension "my-first-extension" is now active!');
-    var disposable = vscode.commands.registerCommand('extension.sayHello', () => {
-        vscode.window.showInformationMessage('Hello World!');
-    });
-    context.subscriptions.push(disposable);
+// ...
+var disposable = vscode.commands.registerCommand('extension.sayHello', () => {
+    var editor = vscode.window.activeTextEditor;
+    if (!editor) {
+        return; // No open text editor
+    }
+    var selection = editor.selection;
+    var text = editor.document.getText(selection);
+    // Display a message box to the user
+    vscode.window.showInformationMessage('Selected characters: ' + text.length);
+  });
+  context.subscriptions.push(disposable);
 }
 ```
 
 ### Walkthrough
 
-We'll go over it line by line.
+The initial code is the same as the last, we're just changing the function
+supplied to `registerCommand`.
 
-`import * as vscode from 'vsode'`
+`var editor = vscode.window.activeTextEditor;`
 
-In the first line we import every module in the vscode library as vscode so we
-have access to the API.
+First we grab the activeTextEditor, which is stored on the window namespace
+of vscode.
 
-`export function activate(context: vscode.ExtensionContext) {`
+Next we check if we have an editor, otherwise we return.
 
-In the second line we export our function called activate. Each extension should
-export from its main file a function named `activate()` which VS Code will
-invoke only once when any of the `activationEvents` described in the
-package.json file occur.
+`var selection = editor.selection;`
 
-`console.log('Congratulations, your extension "my-first-extension" is now active!');`
+Next we grab a reference to the currently selected text.
 
-In the third line we print a message indicating our extension loaded properly.
+`var text = editor.document.getText(selection)`
 
-```typescript
-var disposable = vscode.commands.registerCommand('extension.sayHello', () => {
-    vscode.window.showInformationMessage('Hello World!');
-});
-```
+Then we retrieve the selected text and store it in the text variable.
 
-In the fourth line we register our command. There are two important parts of
-this line.
+`vscode.window.showInformationMessage('Selected characters: ' + text.length);`
 
-1. First, a command is being registered using the `registerCommand`
-method on `vscode.commands`. We associate a function with the command by passing
-in a function as the second parameter. In our callback we call
-`showInformationMessage` on `vscode.window` passing in our message as a string.
-2. Finally, we store the return of calling `registerCommand` in the `dispoable`
-variable. The return from `registerCommand` is an instance of the `Disposable`
-class. The `Disposable` class represents a type which can release resources,
-such as event listening or a timer.
-
-`context.subscriptions.push(disposable);`
-
-In the last line we push our disposable onto the context's subscriptions array.
+Finally we display the character count in the information panel.
 
 #### API References
 
 [registerCommand API](https://code.visualstudio.com/docs/extensionAPI/vscode-api#commands.registerCommand)
-
-[showInformationMessage API](https://code.visualstudio.com/docs/extensionAPI/vscode-api#window.showInformationMessage)
 
 [Disposable API](https://code.visualstudio.com/docs/extensionAPI/vscode-api#Disposable)
 

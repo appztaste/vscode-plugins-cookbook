@@ -89,8 +89,44 @@ in the information bar at the top of the window.
 - `vsc-extension-quickstart.md` - A Quick Start guide for you.
 - `test/extension.test.ts` - you can put your extension unit tests in here and run your tests against the VS Code API (see Testing Your Extension)
 
+### Activation
 
-### Configuration File
+To prevent extensions from interfering with optimal program execution,
+extensions are sandboxed into their own process and are activated lazily. This
+is why we create our plugin within the `activate()` method.
 
-To make the command available to VS Code for use, you must set the package.json
-file for your extension. 
+[For Extra Details Refer To API](https://code.visualstudio.com/docs/extensions/example-hello-world#_extension-activation)
+
+### Configuration Files
+
+To make the command available to VS Code for use, and to set our activation 
+event you must set the package.json file for your extension. When
+generating an extension this is all done by default. If we look in our
+package.json file we can see both our activation event and our execution
+command.
+
+```json
+{
+    // ...
+    "activationEvents": [
+        "onCommand:extension.sayHello"
+    ],
+    // ...
+    "contributes": {
+        "commands": [
+            {
+                "command": "extension.sayHello",
+                "title": "Hello World"
+            }
+        ]
+    }
+    // ...
+}
+```
+
+These are the properties of interest, `activationEvents` and `contributes`. As
+you likely surmised that `activationEvents` handles the activation event
+for our command. It is triggered `onCommand` or when it is called. The
+`contributes` tells vscode what we are adding, in this instance a command named
+`Hello World` that is associated with the registered command
+`extension.sayHello` (when we called `registerCommand` above).

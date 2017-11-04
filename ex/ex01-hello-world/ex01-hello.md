@@ -84,7 +84,7 @@ in the information bar at the top of the window.
 
 The code generator automatically generates a number of files for configuring
 and building your extension. It's important to know what each does so you
-can fully customize your extension.
+can fully customize your extension.\
 [Reference API](https://code.visualstudio.com/docs/extensions/example-hello-world#_miscellaneous-files)
 
 ### Activation
@@ -126,6 +126,8 @@ for our command. It is triggered `onCommand` or when it is called. The
 `Hello World` that is associated with the registered command
 `extension.sayHello` (when we called `registerCommand` above). Now our
 extension is available under `Hello World` in the command pallete.
+
+[Activation Manifest API](https://code.visualstudio.com/docs/extensions/example-hello-world#_the-extension-manifest-packagejson)
 
 ### Debugging
 

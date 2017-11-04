@@ -78,3 +78,19 @@ sets the necessary configuration files to tell VS Code how you want to use
 the command. Follow the instructions in running-extensions.md to run the
 command. If everything worked correctly, you should see `Hello World` display
 in the information bar at the top of the window.
+
+### File Details
+
+- `.vscode/launch.json` defines launching VS Code in the Extension Development mode. It also points with `preLaunchTask` to a task defined in `.vscode/tasks.json` that runs the TypeScript compiler.
+- `.vscode/settings.json` by default excludes the out folder. You can modify which file types you want to hide.
+- `.gitignore` - Tells Git version control which patterns to ignore.
+- `.vscodeignore` - Tells the packaging tool which files to ignore when publishing the extension.
+- `README.md` - README file describing your extension for VS Code users.
+- `vsc-extension-quickstart.md` - A Quick Start guide for you.
+- `test/extension.test.ts` - you can put your extension unit tests in here and run your tests against the VS Code API (see Testing Your Extension)
+
+
+### Configuration File
+
+To make the command available to VS Code for use, you must set the package.json
+file for your extension. 

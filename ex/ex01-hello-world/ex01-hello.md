@@ -81,13 +81,10 @@ in the information bar at the top of the window.
 
 ### File Details
 
-- `.vscode/launch.json` defines launching VS Code in the Extension Development mode. It also points with `preLaunchTask` to a task defined in `.vscode/tasks.json` that runs the TypeScript compiler.
-- `.vscode/settings.json` by default excludes the out folder. You can modify which file types you want to hide.
-- `.gitignore` - Tells Git version control which patterns to ignore.
-- `.vscodeignore` - Tells the packaging tool which files to ignore when publishing the extension.
-- `README.md` - README file describing your extension for VS Code users.
-- `vsc-extension-quickstart.md` - A Quick Start guide for you.
-- `test/extension.test.ts` - you can put your extension unit tests in here and run your tests against the VS Code API (see Testing Your Extension)
+The code generator automatically generates a number of files for configuring
+and building your extension. It's important to know what each does so you
+can fully customize your extension.
+[Reference API](https://code.visualstudio.com/docs/extensions/example-hello-world#_miscellaneous-files)
 
 ### Activation
 
@@ -128,3 +125,10 @@ for our command. It is triggered `onCommand` or when it is called. The
 `Hello World` that is associated with the registered command
 `extension.sayHello` (when we called `registerCommand` above). Now our
 extension is available under `Hello World` in the command pallete.
+
+### Debugging
+
+VS Code has a full debugging suite built in that knows how to work perfectly
+with typescript.
+
+[Debugging Your Extension](https://code.visualstudio.com/docs/extensions/example-hello-world#_debugging-your-extension)

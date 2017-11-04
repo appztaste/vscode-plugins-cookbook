@@ -85,7 +85,7 @@ in the information bar at the top of the window.
 The code generator automatically generates a number of files for configuring
 and building your extension. It's important to know what each does so you
 can fully customize your extension.\
-[Reference API](https://code.visualstudio.com/docs/extensions/example-hello-world#_miscellaneous-files)
+[Configuration File API](https://code.visualstudio.com/docs/extensions/example-hello-world#_miscellaneous-files)
 
 ### Activation
 
@@ -93,7 +93,7 @@ To prevent extensions from interfering with optimal program execution,
 extensions are sandboxed into their own process and are activated lazily. This
 is why we create our plugin within the `activate()` method.
 
-[For Extra Details Refer To API](https://code.visualstudio.com/docs/extensions/example-hello-world#_extension-activation)
+[Activation API](https://code.visualstudio.com/docs/extensions/example-hello-world#_extension-activation)
 
 ### Configuration Files
 

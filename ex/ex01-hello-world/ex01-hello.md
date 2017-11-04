@@ -107,11 +107,9 @@ command.
 
 ```json
 {
-    // ...
     "activationEvents": [
         "onCommand:extension.sayHello"
     ],
-    // ...
     "contributes": {
         "commands": [
             {
@@ -120,7 +118,6 @@ command.
             }
         ]
     }
-    // ...
 }
 ```
 

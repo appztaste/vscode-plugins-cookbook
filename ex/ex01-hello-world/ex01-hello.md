@@ -127,7 +127,7 @@ for our command. It is triggered `onCommand` or when it is called. The
 `extension.sayHello` (when we called `registerCommand` above). Now our
 extension is available under `Hello World` in the command pallete.
 
-[Activation Manifest API](https://code.visualstudio.com/docs/extensions/example-hello-world#_the-extension-manifest-packagejson)
+[Extension Manifest API](https://code.visualstudio.com/docs/extensions/example-hello-world#_the-extension-manifest-packagejson)
 
 ### Debugging
 

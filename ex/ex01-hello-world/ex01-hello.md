@@ -54,17 +54,27 @@ var disposable = vscode.commands.registerCommand('extension.sayHello', () => {
 ```
 
 In the fourth line we register our command. There are two important parts of
-this line. First, a command is being registered using the `registerCommand`
+this line.
+
+First, a command is being registered using the `registerCommand`
 method on `vscode.commands`. We associate a function with the command by passing
 in a function as the second parameter. In our callback we call
 `showInformationMessage` on `vscode.window` passing in our message as a string.
+
 Finally, we store the return of calling `registerCommand` in the `dispoable`
 variable. The return from `registerCommand` is an instance of the `Disposable`
 class. The `Disposable` class represents a type which can release resources,
 such as event listening or a timer.
 
-### API References
+#### API References
 
 [registerCommand](https://code.visualstudio.com/docs/extensionAPI/vscode-api#commands.registerCommand)
 [Disposable](https://code.visualstudio.com/docs/extensionAPI/vscode-api#Disposable)
 
+### Running The Code
+
+You can run the example right now because the code generator automatically
+sets the necessary configuration files to tell VS Code how you want to use
+the command. Follow the instructions in running-extensions.md to run the
+command. If everything worked correctly, you should see `Hello World` display
+in the information bar at the top of the window.

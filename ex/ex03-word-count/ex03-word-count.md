@@ -1,6 +1,6 @@
 # Example 03 - Word Count
 
-[Adataped from the VS Code Word Count](https://code.visualstudio.com/docs/extensions/example-word-count)
+[Adapted from the VS Code Word Count](https://code.visualstudio.com/docs/extensions/example-word-count)
 
 ## Word Count
 

@@ -1,6 +1,6 @@
 # Example 02 - Character Count
 
-[Adataped from the VS Code Hello World](https://code.visualstudio.com/docs/extensions/example-hello-world)
+[Adapted from the VS Code Hello World](https://code.visualstudio.com/docs/extensions/example-hello-world)
 
 ## Project Prep
 

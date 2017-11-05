@@ -41,7 +41,6 @@ export function activate(context: vscode.ExtensionContext) {
                                          cursorWordRange.end.character);
         editor.selection = newSe;
         return true;
-
       } else {
         return false;
       }

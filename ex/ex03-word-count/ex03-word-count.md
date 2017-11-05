@@ -242,6 +242,6 @@ Remove:
 
 ## Running The Code
 
-Run the extension by either doing a window reload Ctrl+R or with F5 and then
-start editing a Markdown file. You should now should have a live updating Word
-Count.
+Run the extension by either doing a window reload `Ctrl+R` or with `F5` and
+then start editing a Markdown file. You should now should have a live updating
+Word Count.

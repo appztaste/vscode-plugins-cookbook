@@ -1,15 +1,22 @@
-# Example 02 - Character Count
+# Example 03 - Word Count
 
-[Adataped from the VS Code Hello World](https://code.visualstudio.com/docs/extensions/example-hello-world)
+[Adataped from the VS Code Word Count](https://code.visualstudio.com/docs/extensions/example-word-count)
 
-## Project Prep
+## Word Count
 
-To make this simple, just make a copy of your last project or edit it directly.
+In this recipe we're going to go over how to add a word counter display to our
+bottom information panel. It will display or activate specifically for markdown
+files.
 
-## Character Count
+## Overview
 
-To keep this simple, we're just going to edit the command implementation and
-leave everything else the same.
+This example has three sections which will take you through a set of related concepts:
+
+1. Update the Status Bar - display custom text in the VS Code Status Bar
+2. Subscribing to Events - updating the Status Bar based on editor events
+3. Disposing Extension Resources - release resources like event subscriptions or UI handles
+
+After generating 
 
 ### The Code
 

@@ -17,7 +17,7 @@ This example has three sections which will take you through a set of related con
 3. Disposing Extension Resources - release resources like event subscriptions or UI handles
 
 In this example we have two steps, create a WordCounter class, and register our
-WordCounter class as a command. 
+WordCounter class as a command.
 
 ## The Code
 

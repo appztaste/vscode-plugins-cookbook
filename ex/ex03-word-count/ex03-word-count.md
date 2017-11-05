@@ -131,6 +131,58 @@ dispose() {
 Finally, we implement the `dispose()` method so our resources are disposed of
 when WordCount is no longer needed.
 
+### WorldController
+
+The WorldController class watches global event emitters and calls and updates
+our wordCounter function when appropriate.
+
+```typescript
+private _wordCounter: WordCounter;
+private _disposable: Disposable;
+```
+
+We declare our member variables.
+
+Inside the constructor we have:
+
+```typescript
+this._wordCounter = wordCounter;
+
+// subscribe to selection change and editor activation events
+let subscriptions: Disposable[] = [];
+window.onDidChangeTextEditorSelection(this._onEvent, this, subscriptions);
+window.onDidChangeActiveTextEditor(this._onEvent, this, subscriptions);
+```
+
+In this section we store our wordCounter reference, declare and init a
+subscriptions variable and registers two event emitters. The two emitters are
+`onDidChangeTextEditorSelection` is raised as the cursor position changes and
+`onDidChangeActiveTextEditor` is raised as the active editor changes.
+The emitters are passed our custom `_onEvent` function, `this` and our
+subscriptions array.
+
+`this._wordCounter.updateWordCount();`
+
+Here we update the counter for the current file.
+
+`this._disposable = Disposable.from(...subscriptions);`
+
+Finally, we create a combined disposable out of our two event emitters.
+
+```typescript
+dispose() {
+  this._disposable.dispose();
+}
+
+private _onEvent() {
+  this._wordCounter.updateWordCount();
+}
+```
+
+To finish out the class, we create a `dispose()` method to handle the resources
+when the WordCounterController is no longer needed. Our `_onEvent()` method
+is last, and it simply updates the counter.
+
 ### activate()
 
 Now that our functionality is implemented, it's time to register our command
@@ -140,17 +192,11 @@ inside the `activate()` method.
 
 We create our WordCounter utility object.
 
-```typescript
-let disposable = commands.registerCommand('extension.sayHello', () => {
-  wordCounter.updateWordCount();
-});
-```
+`let controller = new WordCounterController(wordCounter);`
 
-To keep things simple, we're still registering the command under our initial
-`extension.sayHello` handle. Inside of our callback function, we call
-`updateWordCount()` on `wordCounter`. Every time the extension is called, it
-will update our wordCounter object to the new word counter and display it in
-the status bar.
+Create our WordCounterController, passing in the wordCounter.
+
+Finally, we push our objects onto the subscriptions array.
 
 ### API References
 
@@ -158,9 +204,44 @@ the status bar.
 
 [StatusBarAlignment API](https://code.visualstudio.com/docs/extensionAPI/vscode-api#StatusBarAlignment)
 
+[Disposable API](https://code.visualstudio.com/docs/extensionAPI/vscode-api#Disposable)
+
+## Configuration File
+
+We want our plugin to activate when a markdown file is open. Lets set our
+package.json properties.
+
+First set `activationEvents` to trigger on markdown documents.
+
+```json
+"activationEvents": [
+        "onLanguage:markdown"
+    ]
+```
+
+### onLanguage event
+
+The onLanguage:${language} event takes the language id, in this case "markdown",
+and will be raised whenever a file of that language is opened.
+
+Second, remove the contributes property since we won't be calling our command
+directly.
+
+Remove:
+```json
+"contributes": {
+        "commands":
+            [{
+                "command": "extension.sayHello",
+                "title": "Hello World"
+            }
+        ]
+    }
+```
+
+
 ## Running The Code
 
-You can run the example just like the previous one using `hello world`, except
-you need to create and document, type some text and select it before it will
-work. If everything is working correctly, you should see the number of
-characters you have selected in the information panel.
+Run the extension by either doing a window reload Ctrl+R or with F5 and then
+start editing a Markdown file. You should now should have a live updating Word
+Count.

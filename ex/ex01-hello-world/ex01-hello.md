@@ -134,7 +134,7 @@ for our command. It is triggered `onCommand` or when it is called. The
 `contributes` tells vscode what we are adding, in this instance a command named
 `Hello World` that is associated with the registered command
 `extension.sayHello` (when we called `registerCommand` above). Now our
-extension is available under `Hello World` in the command pallete.
+extension is available under `Hello World` in the command palette.
 
 [Extension Manifest](https://code.visualstudio.com/docs/extensions/example-hello-world#_the-extension-manifest-packagejson)
 

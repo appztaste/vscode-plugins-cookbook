@@ -1,4 +1,4 @@
-# Example 04 - Semi Colon EOL
+# Example 05 - Semi Colon EOL
 
 [Adapted from the Auto Insert Semi-colon Extension](https://github.com/litgh/auto-insert-semicolon)
 
@@ -14,7 +14,7 @@ the active line.
 import * as vscode from 'vscode';
 
 export function activate(context: vscode.ExtensionContext) {
-    let disposable: vscode.Disposable = 
+    let disposable: vscode.Disposable =  f f  f
         vscode.commands
               .registerTextEditorCommand('extension.auto-insert-semicolon', 
         (editor, textEdit) => {
@@ -107,7 +107,7 @@ Finally we push our disposable.
 
 ## Configuration File
 
-In this example we set a hotkey and command pallete command.
+In this example we set a hotkey and command palette command.
 
 ```json
 {
@@ -132,7 +132,7 @@ In this example we set a hotkey and command pallete command.
 }
 ```
 
-Using this configuration, we add the command under the pallete using the title
+Using this configuration, we add the command under thepalette using the title
 `Auto Insert Semicolon` and also binds it to the  hotkey `alt+enter`. Finally,
 we set the activation to trigger when calling the command.
 
@@ -140,7 +140,7 @@ we set the activation to trigger when calling the command.
 
 To run the extension, follow the normal procedure and then create a new
 document, from there type some text. Now try either the hot key `alt+enter` or
-the command pallete command `Auto Insert Semicolon`. Make sure to click in the
+the commandpalette command `Auto Insert Semicolon`. Make sure to click in the
 middle of a word and test it to see how it automatically moves to the end of the
 line.
 

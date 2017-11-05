@@ -20,7 +20,7 @@ this._statusBarItem.text = wordCount !== 1
 
 All that's changed is the addition of `$(pencil)` to the beginning of each count
 label. The expression `$(icon)` displays a
-[Github Octibon](https://octicons.github.com/).
+[Github Octicon](https://octicons.github.com/).
 
 
 ## Running The Code

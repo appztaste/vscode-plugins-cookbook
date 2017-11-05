@@ -239,7 +239,6 @@ Remove:
     }
 ```
 
-
 ## Running The Code
 
 Run the extension by either doing a window reload `Ctrl+R` or with `F5` and

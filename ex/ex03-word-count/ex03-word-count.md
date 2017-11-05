@@ -136,17 +136,27 @@ when WordCount is no longer needed.
 Now that our functionality is implemented, it's time to register our command
 inside the `activate()` method.
 
+`let wordCounter = new WordCounter();`
 
+We create our WordCounter utility object.
+
+```typescript
+let disposable = commands.registerCommand('extension.sayHello', () => {
+  wordCounter.updateWordCount();
+});
+```
+
+To keep things simple, we're still registering the command under our initial
+`extension.sayHello` handle. Inside of our callback function, we call
+`updateWordCount()` on `wordCounter`. Every time the extension is called, it
+will update our wordCounter object to the new word counter and display it in
+the status bar.
 
 ### API References
 
-[activeTextEditor API](https://code.visualstudio.com/docs/extensionAPI/vscode-api#window.activeTextEditor)
+[window.createStatusBar API](https://code.visualstudio.com/docs/extensionAPI/vscode-api#window.createStatusBarItem)
 
-[window.activeTextEditor API](https://code.visualstudio.com/docs/extensionAPI/vscode-api#window.activeTextEditor)
-
-[TextEditor.selection API](https://code.visualstudio.com/docs/extensionAPI/vscode-api#TextEditor.selection)
-
-[TextDocument.getText API](https://code.visualstudio.com/docs/extensionAPI/vscode-api#TextDocument.getText)
+[StatusBarAlignment API](https://code.visualstudio.com/docs/extensionAPI/vscode-api#StatusBarAlignment)
 
 ## Running The Code
 

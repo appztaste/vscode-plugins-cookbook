@@ -16,50 +16,38 @@ This example has three sections which will take you through a set of related con
 2. Subscribing to Events - updating the Status Bar based on editor events
 3. Disposing Extension Resources - release resources like event subscriptions or UI handles
 
-After generating 
+In this example we have two steps, create a WordCounter class, and register our
+WordCounter class as a command. 
 
 ### The Code
 
-```typescript
-// ...
-var disposable = vscode.commands.registerCommand('extension.sayHello', () => {
-    var editor = vscode.window.activeTextEditor;
-    if (!editor) {
-        return; // No open text editor
-    }
-    var selection = editor.selection;
-    var text = editor.document.getText(selection);
-    // Display a message box to the user
-    vscode.window.showInformationMessage('Selected characters: ' + text.length);
-  });
-  context.subscriptions.push(disposable);
-}
-```
+For full code listening, reference ex03-word-count.ts.
 
 ### Walkthrough
 
-The initial code is the same as the last, we're just changing the function
-supplied to `registerCommand`.
+On the first line we import all of the vscode module we need to create our
+extension.
 
-`var editor = vscode.window.activeTextEditor;`
+Skipping to the WordCounter Class.
 
-First we grab the activeTextEditor, which is stored on the window namespace
-of vscode.
+`private _statusBarItem: StatusBarItem;`
 
-Next we check if we have an editor, otherwise we return.
+On the first line we declare a private variable called _statusBarItem to store
+the reference to the status bar.
 
-`var selection = editor.selection;`
+`public updateWordCount() {`
 
-Next we grab a reference to the currently selected text.
+Next we begin defining our `updateWordCount()` method.
 
-`var text = editor.document.getText(selection)`
+```typescript
+if (!this._statusBarItem) {
+  this._statusBarItem = window.createStatusBarItem(StatusBarAlignment.Left);
+}
+```
 
-Then we retrieve the editor document and access the selected text and store it
-in the text variable.
-
-`vscode.window.showInformationMessage('Selected characters: ' + text.length);`
-
-Finally we display the character count in the information panel.
+If we don't already have a `StatusBar` stored on our reference, create one. In
+this casse we pass in the `StatusBarAlignment.Left` enum to make our display
+align to the left of the `StatusBar`
 
 #### API References
 

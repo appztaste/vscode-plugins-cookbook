@@ -28,3 +28,11 @@ label. The expression `$(icon)` displays a
 Run the extension by either doing a window reload `Ctrl+R` or with `F5` and
 then start editing a Markdown file. You should now should have a live updating
 Word Count.
+
+## Disposing Extension Resources
+
+[Disposin Extension Resources](https://code.visualstudio.com/docs/extensions/example-word-count#_disposing-extension-resources).
+
+## Installing your Extension Locally
+
+[Installing your Extension Locally](https://code.visualstudio.com/docs/extensions/example-word-count#_installing-your-extension-locally)

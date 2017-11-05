@@ -41,7 +41,9 @@ have access to the API.
 In the second line we export our function called activate. Each extension should
 export from its main file a function named `activate()` which VS Code will
 invoke only once when any of the `activationEvents` described in the
-package.json file occur.
+package.json file occur. We can see our context, an instance of the
+`ExtensionContext` class is passed in as a parameter. The context is used
+to add subscriptions amongst other things.
 
 `console.log('Congratulations, your extension "my-first-extension" is now active!');`
 

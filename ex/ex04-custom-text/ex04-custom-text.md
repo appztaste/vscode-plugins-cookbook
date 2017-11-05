@@ -29,7 +29,7 @@ Run the extension just like the previous example.
 
 ## Disposing Extension Resources
 
-[Disposin Extension Resources](https://code.visualstudio.com/docs/extensions/example-word-count#_disposing-extension-resources).
+[Disposing Extension Resources](https://code.visualstudio.com/docs/extensions/example-word-count#_disposing-extension-resources).
 
 ## Installing your Extension Locally
 

@@ -11,7 +11,7 @@ To make this simple, just make a copy of your last project or edit it directly.
 To keep this simple, we're just going to edit the command implementation and
 leave everything else the same.
 
-### The Code
+## The Code
 
 ```typescript
 // ...
@@ -29,7 +29,7 @@ var disposable = vscode.commands.registerCommand('extension.sayHello', () => {
 }
 ```
 
-### Walkthrough
+## Walkthrough
 
 The initial code is the same as the last, we're just changing the function
 supplied to `registerCommand`.
@@ -54,7 +54,7 @@ in the text variable.
 
 Finally we display the character count in the information panel.
 
-#### API References
+### API References
 
 [activeTextEditor API](https://code.visualstudio.com/docs/extensionAPI/vscode-api#window.activeTextEditor)
 
@@ -64,7 +64,7 @@ Finally we display the character count in the information panel.
 
 [TextDocument.getText API](https://code.visualstudio.com/docs/extensionAPI/vscode-api#TextDocument.getText)
 
-### Running The Code
+## Running The Code
 
 You can run the example just like the previous one using `hello world`, except
 you need to create and document, type some text and select it before it will

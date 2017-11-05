@@ -35,7 +35,10 @@ export function activate(context: vscode.ExtensionContext) {
       const cursorWordRange = doc.getWordRangeAtPosition(selection.active);
 
       if (cursorWordRange) {
-        let newSe = new vscode.Selection(cursorWordRange.start.line, cursorWordRange.start.character, cursorWordRange.end.line, cursorWordRange.end.character);
+        let newSe = new vscode.Selection(cursorWordRange.start.line,
+                                         cursorWordRange.start.character,
+                                         cursorWordRange.end.line,
+                                         cursorWordRange.end.character);
         editor.selection = newSe;
         return true;
 

@@ -39,9 +39,9 @@ export function activate(context: vscode.ExtensionContext) {
       const cursorWordRange = doc.getWordRangeAtPosition(selection.active);
       if (cursorWordRange) {
           let newSe = new vscode.Selection(cursorWordRange.start.line,
-                                          cursorWordRange.start.character,
-                                          cursorWordRange.end.line,
-                                          cursorWordRange.end.character);
+                                           cursorWordRange.start.character,
+                                           cursorWordRange.end.line,
+                                           cursorWordRange.end.character);
           editor.selection = newSe;
           return true;
       } else {
@@ -146,4 +146,5 @@ In this example we set our activation event and command palette command.
 ## Running The Code
 
 Run the command as previous. After placing the cursor on a word, call
-`Copy Word: Copy` from the command palette.
+`Copy Word: Copy` from the command palette. Paste and ensure it copy and
+pasted the correct word.

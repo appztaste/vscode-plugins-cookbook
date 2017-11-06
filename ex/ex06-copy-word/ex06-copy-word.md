@@ -138,7 +138,6 @@ In this example we set our activation event and command palette command.
   },
     "activationEvents": [
       "onCommand:copy-word.copy",
-      "onCommand:copy-word.cut"
   ]
 }
 ```

@@ -1,4 +1,4 @@
-# Example 08 - Copy Filenane
+# Example 08 - Copy Filename
 
 [Adapted from Copy Filename Extension](https://github.com/nemesv/vscode-copy-file-name)
 

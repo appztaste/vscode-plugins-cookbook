@@ -53,48 +53,51 @@ https://github.com/sandcastle/vscode-whitespace
 https://github.com/jrebocho/vscode-random
 https://github.com/zhaopengme/vscode-fileheader
 https://github.com/albertromkes/tabout
-
 https://github.com/richie5um/vscode-sort-json
-https://bitbucket.org/jbeast/switchit.git
-https://github.com/BCJTI/file-smart-reopener-vscode
-https://github.com/SBeator/sort-js-object-keys
-https://github.com/dinhani/vscode-copy-on-select
-https://github.com/ramya-rao-a/show-offset
-https://github.com/dxcweb/string-convert
-https://github.com/aaronbushnell/vscode-rebound-delete
-https://github.com/WengerK/vscode-highlight-bad-chars
-https://github.com/ksmithut/plusplus
-https://github.com/jakelucas/code-file-nav
-https://github.com/doi/fileheadercomment
-https://github.com/krizzdewizz/vscode-goto-last-edit-location
-https://github.com/dlech/vscode-chmod
-https://github.com/DakshMiglani/VSCode-Hex-To-RGBA
-https://github.com/DonJayamanne/listFilesVSCode
-https://github.com/Gruntfuggly/bettercomment
-https://github.com/axefrog/vscode-autotrim
-https://github.com/jgoday/vscode-createtmpfile
-https://github.com/natewallace/createGUID
-https://github.com/Perkovec/Emoji
-https://github.com/fabiospampinato/vscode-diff
-https://github.com/espresso3389/genuuid-vscode
-https://github.com/espresso3389/genrandom-vscode
-https://github.com/zabel-xyz/goto-line-ex
-https://github.com/plrenaudin/goto-last-edit-vscode
-https://github.com/jakubszalaty/go-to-word/
-https://github.com/editor-extensions/vscode-insert-special-symbol
-https://github.com/jvlad/InsertTimeStamp.vscode.ts
-https://github.com/kaiwood/vscode-insert-cursor-at-beginning-of-each-line-selected
-https://github.com/compulim/vscode-indent-4to2
 https://github.com/Jasonlhy/VSCode-Hungry-Delete
-https://github.com/lamartire/vscode-line-to-column
+https://github.com/doi/fileheadercomment
 https://github.com/compulim/vscode-ipaddress
-https://github.com/tomoki1207/selectline-statusbar
-https://github.com/fcrespo82/vscode-rot
-https://github.com/kfelichko/open-under
-https://github.com/chrisdias/vscode-opennewinstance
-https://github.com/auchenberg/vscode-open-file-folder
-https://github.com/JulioGold/vscode-smart-split-into-lines
-https://github.com/veekas/use-strict-everywhere
-https://github.com/ilich/vscode-untabify
-https://github.com/silesky/vscode-toggle-bool
-https://github.com/david-mart/vscode-swap-word
+https://github.com/SBeator/sort-js-object-keys
+
+// Needs to be converted to insert instead of info popup
+https://github.com/natewallace/createGUID // 19
+
+
+https://github.com/espresso3389/genuuid-vscode // 21
+https://github.com/auchenberg/vscode-open-file-folder  // 22
+https://github.com/kaiwood/vscode-insert-cursor-at-beginning-of-each-line-selected // 29
+https://github.com/chrisdias/vscode-opennewinstance // 30
+https://github.com/dxcweb/string-convert // 34
+https://github.com/lamartire/vscode-line-to-column // 36
+https://github.com/DonJayamanne/listFilesVSCode // 36
+https://github.com/DakshMiglani/VSCode-Hex-To-RGBA // 38
+https://github.com/Gruntfuggly/bettercomment // 43
+https://github.com/espresso3389/genrandom-vscode // 45
+https://github.com/jakelucas/code-file-nav // 45
+https://github.com/JulioGold/vscode-smart-split-into-lines // 47
+https://github.com/axefrog/vscode-autotrim // 47
+https://github.com/krizzdewizz/vscode-goto-last-edit-location // 48
+https://github.com/dlech/vscode-chmod // 52
+https://github.com/compulim/vscode-indent-4to2 // 52
+https://github.com/BCJTI/file-smart-reopener-vscode // 53
+https://github.com/Perkovec/Emoji // 55
+https://github.com/jgoday/vscode-createtmpfile // 57
+https://github.com/tomoki1207/selectline-statusbar // 60
+https://github.com/ramya-rao-a/show-offset // 64
+https://github.com/david-mart/vscode-swap-word // 65
+https://github.com/ksmithut/plusplus // 66
+https://github.com/jvlad/InsertTimeStamp.vscode.ts // 69
+https://github.com/kfelichko/open-under // 70
+https://github.com/WengerK/vscode-highlight-bad-chars // 70
+https://github.com/dinhani/vscode-copy-on-select // 74
+https://github.com/aaronbushnell/vscode-rebound-delete // 75
+https://github.com/silesky/vscode-toggle-bool // 76
+https://github.com/veekas/use-strict-everywhere // 78
+https://github.com/fcrespo82/vscode-rot // 78
+https://github.com/plrenaudin/goto-last-edit-vscode // 82
+https://github.com/zabel-xyz/goto-line-ex // 93
+https://github.com/ilich/vscode-untabify // 104 
+https://bitbucket.org/jbeast/switchit.git // 110
+https://github.com/jakubszalaty/go-to-word/ // 118
+https://github.com/fabiospampinato/vscode-diff // 120
+https://github.com/editor-extensions/vscode-insert-special-symbol // 178

@@ -59,7 +59,6 @@ https://github.com/doi/fileheadercomment
 https://github.com/compulim/vscode-ipaddress
 https://github.com/SBeator/sort-js-object-keys
 
-https://github.com/auchenberg/vscode-open-file-folder  // 22
 https://github.com/kaiwood/vscode-insert-cursor-at-beginning-of-each-line-selected // 29
 https://github.com/chrisdias/vscode-opennewinstance // 30
 https://github.com/dxcweb/string-convert // 34

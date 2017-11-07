@@ -86,7 +86,7 @@ Edit the configuration file for cut copy instead.
     },
     "activationEvents": [
         "onCommand:genuuid.generateUUID"
-    ],
+    ]
 }
 ```
 

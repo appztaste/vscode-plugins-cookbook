@@ -1,4 +1,4 @@
-# Example 11 - Insert GUID
+# Example 11 - Open File Folder
 
 [Adapted from Open File Folder](https://github.com/auchenberg/vscode-open-file-folder)
 
@@ -94,11 +94,11 @@ Edit the configuration file for cut copy instead.
 	},
     "activationEvents": [
         "onCommand:extension.openFileFolder"
-    ],
+    ]
 }
 ```
 
 ## Running The Code
 
-To run, call the command `Generate UUID` from the command palette. Make sure to
+To run, call the command `Open this folder as Workspace` from the command palette. Make sure to
 try with single and multiple selection.

@@ -100,5 +100,5 @@ Edit the configuration file for cut copy instead.
 
 ## Running The Code
 
-To run, call the command `Open this folder as Workspace` from the command palette. Make sure to
-try with single and multiple selection.
+To run, call the command `Open this folder as Workspace` from the command
+palette.

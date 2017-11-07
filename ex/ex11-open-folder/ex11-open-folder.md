@@ -56,7 +56,7 @@ open a new window.
 
 [VS Code API Commands](https://code.visualstudio.com/docs/extensionAPI/vscode-api-commands)
 
-[Uri.file](https://code.visualstudio.com/docs/extensionAPI/vscode-api#Uri.file)
+[Uri.file API](https://code.visualstudio.com/docs/extensionAPI/vscode-api#Uri.file)
 
 ## Configuration File
 

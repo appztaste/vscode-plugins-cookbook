@@ -20,16 +20,15 @@ export function activate(context: vscode.ExtensionContext) {
       const [rootFolder] = vscode.workspace.workspaceFolders;
       const rootPath = rootFolder.uri.path;
       const activeTextEditor = vscode.window.activeTextEditor;
-
+      
       let path;
-      if (rootPath && activeTextEditor) {
-        let file = activeTextEditor.document.uri.path;
-        path = `${rootPath}/${file}`;
-      } else if(rootPath) {
+      if (activeTextEditor) {
+        path = activeTextEditor.document.uri.path;
+      } else if (rootPath) {
         path = rootPath;
       }
-      if (path) ncp.copy(path, () => console.log('File path has been copied ' + 
-                                                 'to the system clipboard'));
+      if (path) ncp.copy(path, () => console.log('File path has been copied ' +
+        'to the system clipboard'));
   });
   context.subscriptions.push(disposable);
 }
@@ -63,17 +62,16 @@ grab the `path` which is a string path to the current file from the root folder.
 const activeTextEditor = vscode.window.activeTextEditor;
 
 let path;
-if (rootPath && activeTextEditor) {
-  let file = activeTextEditor.document.uri.path;
-  path = `${rootPath}/${file}`;
-} else if(rootPath) {
+if (activeTextEditor) {
+  path = activeTextEditor.document.uri.path;
+} else if (rootPath) {
   path = rootPath;
 }
 if (path) ncp.copy(path, () => console.log('File path has been copied ' + 
                                             'to the system clipboard'));
 ```
 
-In this code if we have a `rootPath` and `activeTextEditor` we set the
+In this code if we have a `activeTextEditor` we set the
 `path` equal to the document uri path, else if we only have rootPath and no
 editor is open, we set `path` equal to the project root path. If path is defined
 we copy it to the clipboard.

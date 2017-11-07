@@ -12,7 +12,7 @@ positions. This will work on every cursor position.
 ```typescript
 'use strict';
 import * as vscode from 'vscode';
-let uuid = require('node-uuid');
+import * as uuid from 'node-uuid';
 
 export function activate(context: vscode.ExtensionContext) {
   let disposable = vscode.commands.registerCommand('genuuid.generateUUID',

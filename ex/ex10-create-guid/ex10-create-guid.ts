@@ -1,8 +1,6 @@
-// genuuid - Generate UUID
-// (C) 2016 Takashi Kawasaki (@espresso3389)
 'use strict';
 import * as vscode from 'vscode';
-let uuid = require('node-uuid');
+import * as uuid from 'node-uuid';
 
 export function activate(context: vscode.ExtensionContext) {
   let disposable = vscode.commands.registerCommand('genuuid.generateUUID',

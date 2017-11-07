@@ -59,11 +59,6 @@ https://github.com/doi/fileheadercomment
 https://github.com/compulim/vscode-ipaddress
 https://github.com/SBeator/sort-js-object-keys
 
-// Needs to be converted to insert instead of info popup
-https://github.com/natewallace/createGUID // 19
-
-
-https://github.com/espresso3389/genuuid-vscode // 21
 https://github.com/auchenberg/vscode-open-file-folder  // 22
 https://github.com/kaiwood/vscode-insert-cursor-at-beginning-of-each-line-selected // 29
 https://github.com/chrisdias/vscode-opennewinstance // 30

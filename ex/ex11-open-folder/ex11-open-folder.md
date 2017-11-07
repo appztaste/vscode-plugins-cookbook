@@ -70,27 +70,7 @@ Edit the configuration file for cut copy instead.
 				"command": "extension.openFileFolder",
 				"title": "Open this folder as Workspace"
 			}
-		],
-		"menus": {
-			"editor/title": [
-				{
-					"command": "extension.openFileFolder",
-					"group": "openFileFolder"
-				}
-			],			
-			"editor/title/context": [
-				{
-					"command": "extension.openFileFolder",
-					"group": "openFileFolder"
-				}
-			],
-			"explorer/context": [
-				{
-					"command": "extension.openFileFolder",
-					"group": "navigation@2"
-				}
-			]
-		}
+		]
 	},
     "activationEvents": [
         "onCommand:extension.openFileFolder"

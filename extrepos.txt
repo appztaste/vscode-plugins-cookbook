@@ -59,7 +59,6 @@ https://github.com/doi/fileheadercomment
 https://github.com/compulim/vscode-ipaddress
 https://github.com/SBeator/sort-js-object-keys
 
-https://github.com/chrisdias/vscode-opennewinstance // 30
 https://github.com/dxcweb/string-convert // 34
 https://github.com/lamartire/vscode-line-to-column // 36
 https://github.com/DonJayamanne/listFilesVSCode // 36

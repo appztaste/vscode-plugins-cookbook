@@ -1,21 +1,43 @@
-'use strict';
+"use strict";
 
-import * as vscode from "vscode";
-import * as path   from "path";
+import { window, commands } from "vscode";
+import * as string from "underscore.string";
+const editor = window.activeTextEditor;
+const registerCommand = commands.registerCommand;
+
+function isCapitalCase(word: string) {
+  return /^([A-Z]+[a-z]*)+[1-9]*/.test(word);
+}
+
+function isSnakeCase(word: string) {
+  return /^([a-z]+_[a-z]+)+[1-9]*/.test(word);
+}
+
+function isDashCase(word) {
+  return /^([a-z]+-[a-z]+)+[1-9]*/.test(word);
+}
+
+function isCamelCase(word) {
+  return /^[a-z]+([A-Z]+[a-z]*)+[1-9]*/.test(word);
+}
 
 export function activate(context) {
-    const disposable = vscode.commands.registerCommand('extension.openFileFolder',
-    (e) => {
-        let folderName;
-        if (e) {
-          folderName = e.path;
-        } else {
-          const activeTextEditor = vscode.window.activeTextEditor;
-          let file = activeTextEditor.document.uri.path;
-          folderName = path.dirname(file);
+  registerCommand('extension.stringConvert', () => {
+    editor.edit(builder => {
+      editor.selections.forEach(selection => {
+        let text = editor.document.getText(selection);
+        if (isCapitalCase(text)) {
+          text = string.underscored(text);
+        } else if (isSnakeCase(text)) {
+          text = string.camelize(text, true);
+        } else if (isCamelCase(text)) {
+          text = string.dasherize(text);
+        } else if (isDashCase(text)) {
+          text = string.camelize(text);
+          text = string.capitalize(text);
         }
-        let folderUrl = vscode.Uri.file(folderName);
-        vscode.commands.executeCommand("vscode.openFolder", folderUrl, true);
+        builder.replace(selection, text);
+      });
     });
-    context.subscriptions.push(disposable);
+  });
 }

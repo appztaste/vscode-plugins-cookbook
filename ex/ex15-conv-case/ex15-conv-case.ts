@@ -22,7 +22,7 @@ function isCamelCase(word) {
 }
 
 export function activate(context) {
-  registerCommand('extension.stringConvert', () => {
+  const disposable = registerCommand('extension.stringConvert', () => {
     editor.edit(builder => {
       editor.selections.forEach(selection => {
         let text = editor.document.getText(selection);
@@ -40,4 +40,5 @@ export function activate(context) {
       });
     });
   });
+  context.subscriptions.push(disposable);
 }
